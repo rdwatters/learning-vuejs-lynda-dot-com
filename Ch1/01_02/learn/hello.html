@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning Vue.js</title>
+  <script src="../../../vue.js"></script>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1>{{msg}}</h1>
+    <!-- <a :href="{{url}}" target="_blank">Go to Google</a> -->
+    <a :href="url + '?hello%20world'" target="_blank">Go to Google</a>
+    <form>
+      <label for="name">Name:</label>
+      <br>
+      <input type="text" :value="name">
+    </form>
+  </div>
+
+
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: 'Hello from Vue.',
+        url: 'https://www.google.com',
+        name: 'Ryan'
+      }
+    });
+  </script>
+</body>
+
+</html>
